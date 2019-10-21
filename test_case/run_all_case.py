@@ -79,7 +79,7 @@ if __name__ == "__main__":
     # 返回实例
     runner = unittest.TextTestRunner()
     # 获取当前时间，这样便于下面的使用。
-    now = time.strftime("%Y-%m-%M-%H_%M_%S", time.localtime(time.time()))
+    now = time.strftime('%Y-%m-%d %H_%M_%S')
     #保存生成报告的路径
     report_path = "E:\\AutoTestProject\\report\\"+now+"_result.html"
     fp = open(report_path,'wb')
