@@ -14,7 +14,7 @@ def all_case():
     discover = unittest.defaultTestLoader.discover(case_dir,
                                                    pattern="test*.py",
                                                    top_level_dir=None)
-    # #discover方法筛选出用例，循环添加到测试套件中
+    #discover方法筛选出用例，循环添加到测试套件中
     # for test_suit in discover:
     #     for test_case in test_suit:
     #         #添加用力到testcase
