@@ -1,10 +1,10 @@
-import smtplib,os,email,time,sys
+import smtplib,os,email,time
 from email.header import Header
 from email.mime.multipart import MIMEMultipart  #带附件
 from email.mime.text import MIMEText
 import unittest
 from  HTMLTestRunner import HTMLTestRunner
-sys.setrecursionlimit(100000)
+
 
 def all_case():
     # 待执行用例的目录
@@ -41,8 +41,8 @@ def send_mail(file_new):
     # 邮件对象
     msg = MIMEMultipart()
     msg['Subject'] = Header("自动化测试报告", 'utf-8').encode()#主题
-    msg['From'] = Header(u'测试人员 <%s>'%sender)                #发件人
-    msg['To'] = Header(u'测试负责人 <%s>'%receiver)            #收件人
+    msg['From'] = sender              #发件人
+    msg['To'] = receiver          #收件人
     # msg['To'] = ';'.join(receiver)
     msg['date'] = time.strftime("%a,%d %b %Y %H:%M:%S %z")
     msg.attach(body)
