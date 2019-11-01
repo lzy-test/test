@@ -3,7 +3,14 @@ from email.header import Header
 from email.mime.multipart import MIMEMultipart  #带附件
 from email.mime.text import MIMEText
 import unittest
+import sys
+sys.path.append('../')
+print(sys.path)
 from  HTMLTestRunner import HTMLTestRunner
+
+# sys.path.append('E:\\AutoTestProject')
+#
+# print(sys.path)
 
 
 def all_case():
